@@ -181,3 +181,8 @@ cclf/get-pip.py
 
 
 data/cats/
+
+*.ipynb
+
+flagged/*
+cclf/flagged/img/tmpavvusd9x.jpg

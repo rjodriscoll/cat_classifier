@@ -3,13 +3,13 @@ import random
 
 TEST_SIZE = 0.1
 
-names= ['winnie', 'magnus']
+names = ["winnie", "magnus"]
 
 
 def move_files(name):
-    src_dir =f'../data/{name}'
-    train_dir =f'../data/cats/train/{name}'
-    test_dir =f'../data/cats/test/{name}'
+    src_dir = f"../data/{name}"
+    train_dir = f"../data/cats/train/{name}"
+    test_dir = f"../data/cats/test/{name}"
 
     if not os.path.exists(test_dir):
         os.makedirs(test_dir)
@@ -19,13 +19,14 @@ def move_files(name):
     files = os.listdir(src_dir)
 
     random.shuffle(files)
-    test_files = files[:int(len(files) * TEST_SIZE)]
-    train_files = files[int(len(files) * TEST_SIZE):]
+    test_files = files[: int(len(files) * TEST_SIZE)]
+    train_files = files[int(len(files) * TEST_SIZE) :]
 
     for file in test_files:
         os.rename(os.path.join(src_dir, file), os.path.join(test_dir, file))
 
     for file in train_files:
         os.rename(os.path.join(src_dir, file), os.path.join(train_dir, file))
+
 
 [move_files(name) for name in names]
