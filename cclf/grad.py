@@ -38,4 +38,4 @@ interface = gr.Interface(
     description='Classify pictures of my cats'
 )
 
-interface.launch()
+interface.launch(share=True)
