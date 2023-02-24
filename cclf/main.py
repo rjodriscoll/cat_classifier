@@ -38,7 +38,7 @@ def load_model():
     model.eval()
 
 
-@app.get("/predict/{img}/", status_code=200)
+@app.put("/predict/{img}", status_code=200)
 async def predict(img):
     prediction = run_pred(img)
     if not prediction:
