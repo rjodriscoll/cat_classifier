@@ -36,7 +36,7 @@ uvicorn main:app --reload
 ```
 
 
-## docker instructions
+# docker instructions
 Install Docker on your machine. You can download Docker from https://www.docker.com/get-started.
 Build the Docker image with the following command:
 
